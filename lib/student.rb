@@ -62,7 +62,8 @@ class Student
       SELECT *
       FROM students
       WHERE grade = 10
-      HAVING min(id)
+      ORDER BY id DESC
+      LIMIT 1
     SQL
  
     DB[:conn].execute(sql).map do |row|
