@@ -62,7 +62,7 @@ class Student
       SELECT *
       FROM students
       WHERE grade = 10
-      WHERE id = 1
+      AND id = 1
     SQL
  
     DB[:conn].execute(sql).map do |row|
