@@ -62,7 +62,7 @@ class Student
       SELECT *
       FROM students
       WHERE grade = 10
-      and id = 2
+      and min(id)
     SQL
  
     DB[:conn].execute(sql).map do |row|
