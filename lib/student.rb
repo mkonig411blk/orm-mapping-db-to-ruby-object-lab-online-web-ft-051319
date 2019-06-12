@@ -62,7 +62,7 @@ class Student
       SELECT *
       FROM students
       WHERE grade = 10
-      and min(id)
+      HAVING min(id)
     SQL
  
     DB[:conn].execute(sql).map do |row|
