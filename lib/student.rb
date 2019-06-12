@@ -62,11 +62,11 @@ class Student
       SELECT *
       FROM students
       WHERE grade = 10
-      AND id = 1
+       LIMIT 1
     SQL
  
-    DB[:conn].execute(sql).map do |row|
-      self.new_from_db(row)
+    DB[:conn].execute(sql)
+      self.new_from_db
     end
   end
   
