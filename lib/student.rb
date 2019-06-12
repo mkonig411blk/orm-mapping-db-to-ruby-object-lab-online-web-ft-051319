@@ -62,7 +62,7 @@ class Student
       SELECT *
       FROM students
       WHERE grade = 10
-      ORDER BY name DESC LIMIT 1
+      ORDER BY name ASC LIMIT 1
     SQL
  
     DB[:conn].execute(sql).map do |row|
